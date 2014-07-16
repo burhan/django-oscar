@@ -1,3 +1,5 @@
+import django
+
 from oscar.core.loading import model_registered
 from oscar.apps.voucher.abstract_models import (
     AbstractVoucher, AbstractVoucherApplication)
