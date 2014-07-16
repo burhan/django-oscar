@@ -21,7 +21,7 @@ RangeProduct = get_model('offer', 'RangeProduct')
 Product = get_model('catalogue', 'Product')
 RangeForm, RangeProductForm = get_classes('dashboard.ranges.forms',
                                           ['RangeForm', 'RangeProductForm'])
-RangeProductFileUpload = get_model('ranges', 'RangeProductFileUpload')
+RangeProductFileUpload = get_model('ranges_dashboard', 'RangeProductFileUpload')
 
 
 class RangeListView(ListView):
