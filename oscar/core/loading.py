@@ -266,7 +266,7 @@ def feature_hidden(feature_name):
 # a total of four methods that hopefully do mostly the same
 
 
-if django.VERSION < (1, 7)[:2]:
+if django.VERSION < (1, 7):
 
     from django.db.models import get_model as django_get_model
 
@@ -300,7 +300,8 @@ else:
 
         This doesn't require that an app with the given app label exists,
         which makes it safe to call when the registry is being populated.
-        TODO: Is this correct?
+        All other methods to access models might raise an exception about the
+        registry not being ready yet.
         """
         return apps.get_registered_model(app_label, model_name)
 
